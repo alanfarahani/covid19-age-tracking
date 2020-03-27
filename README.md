@@ -16,7 +16,7 @@ Screenshots of all of the state pages are taken, and the data are hand-recorded 
 
 
 <div class="figure">
-<img src="covid19_demographics2_files/figure-html/creenshot_2020-03-26 Power BI Report.png" alt="Representative example of data supplied by the state of Nevada regarding distribution of confirmed cases across age ranges.  Accessed on 26-03-2020."  />
+<img src="docs/covid19_demographics2_files/figure-html/creenshot_2020-03-26 Power BI Report.png" alt="Representative example of data supplied by the state of Nevada regarding distribution of confirmed cases across age ranges.  Accessed on 26-03-2020."  />
 <p class="caption">Representative example of data supplied by the state of Nevada regarding distribution of confirmed cases across age ranges.  Accessed on 26-03-2020.</p>
 </div>
 
@@ -25,7 +25,7 @@ Screenshots of all of the state pages are taken, and the data are hand-recorded 
 Without transformation of the age-ranges, the percent of confirmed cases by ages as of 2020-03-27 can be seen in Figure \@ref(fig:state-dist). 
 
 <div class="figure">
-<img src="covid19_demographics2_files/figure-html/state-dist-1.png" alt="Percent of confirmed COVID-19 cases by age-range given by state authorities."  />
+<img src="docs/covid19_demographics2_files/figure-html/state-dist-1.png" alt="Percent of confirmed COVID-19 cases by age-range given by state authorities."  />
 <p class="caption">(\#fig:state-dist)Percent of confirmed COVID-19 cases by age-range given by state authorities.</p>
 </div>
 
@@ -36,7 +36,7 @@ The groups represented in Figure \@ref(fig:new-state-dist) are the following:
 1. Colorado, Connecticut, Massachussets, Nevada, Oregon, Washington
  
 <div class="figure">
-<img src="covid19_demographics2_files/figure-html/new-state-dist-1.png" alt="Percent of confirmed COVID-19 cases by age-range across states, where it is possible to group states by age-range."  />
+<img src="docs/covid19_demographics2_files/figure-html/new-state-dist-1.png" alt="Percent of confirmed COVID-19 cases by age-range across states, where it is possible to group states by age-range."  />
 <p class="caption">(\#fig:new-state-dist)Percent of confirmed COVID-19 cases by age-range across states, where it is possible to group states by age-range.</p>
 </div>
 
@@ -45,14 +45,14 @@ The following illustrates the new cases by age according to absolute case count 
 
 
 <div class="figure">
-<img src="covid19_demographics2_files/figure-html/new-state-dist-case-1.png" alt="Absolute number of confirmed COVID-19 cases by age-range across states, where it is possible to group states by age-range."  />
+<img src="docs/covid19_demographics2_files/figure-html/new-state-dist-case-1.png" alt="Absolute number of confirmed COVID-19 cases by age-range across states, where it is possible to group states by age-range."  />
 <p class="caption">(\#fig:new-state-dist-case)Absolute number of confirmed COVID-19 cases by age-range across states, where it is possible to group states by age-range.</p>
 </div>
 
 The absolute change in the age-demographic profile of recent confirmed COVID-19 cases can be seen in the figure below (Figure \@ref(fig:covid-case-change)).  It is important to note that some states are actively in the process of changing their age-reporting ranges, and so many states (such as Georgia) may not have cumulative case data that concords with previously published data.
 
 <div class="figure">
-<img src="covid19_demographics2_files/figure-html/covid-case-change-1.png" alt="Absolute change in confirmed coronavirus cases where the black points represent all previously aggregated data.  The colors and size of the rightmost points indicate the intensity of the proportional change."  />
+<img src="docs/covid19_demographics2_files/figure-html/covid-case-change-1.png" alt="Absolute change in confirmed coronavirus cases where the black points represent all previously aggregated data.  The colors and size of the rightmost points indicate the intensity of the proportional change."  />
 <p class="caption">(\#fig:covid-case-change)Absolute change in confirmed coronavirus cases where the black points represent all previously aggregated data.  The colors and size of the rightmost points indicate the intensity of the proportional change.</p>
 </div>
 
