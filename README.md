@@ -11,10 +11,10 @@ Alan Farahani
 
 The rapidity of the spread of the novel coronavirus, COVID-19, is one of
 the most notable features of this disease. Much scientific and
-journalistic investigation into epidimeological aspects of the
+journalistic investigation into the epidemiological aspects of the
 coronavirus have focused on *case fatality rates* (CFRs) and other
 demographic variables that may contribute to increased morbidity. For
-instance, it has been argued based on data deriving from China and more
+instance, it has been argued based on data deriving from China, and more
 recently the CDC, that CFRs for those under 40 are relatively low.
 
 In contrast, less attention has been given to the *case detection rate*
