@@ -99,7 +99,7 @@ states, where it is possible to group states by
 age-range.](covid19_demographics2_git_files/figure-gfm/new-state-dist-case-1.png)
 
 The absolute change in the age-demographic profile of recent confirmed
-COVID-19 cases can be seen in the figure below. It is important to note
+COVID-19 cases can be seen in the figure below.  The black point represents the total of the previous day, while the point to the right is scaled to the size of the proportion of new cases for that state (as is the color). It is important to note
 that some states are actively in the process of changing their
 age-reporting ranges, and so many states (such as Georgia) may not have
 cumulative case data that concords with previously published data.
