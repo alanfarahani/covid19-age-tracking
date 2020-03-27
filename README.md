@@ -83,7 +83,7 @@ specific to the social dynamics of those states and/or b) patterns of
 testing based on the ability of state officials (and representatives) to
 respond.
 
-The groups represented in the figure above are the following:
+The groups represented in "Group 1" of the figure below are the following:
 
 1.  Colorado, Connecticut, Massachussets, Nevada, Oregon, Washington
 
