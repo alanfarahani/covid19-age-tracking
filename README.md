@@ -34,7 +34,9 @@ below describes the represented date range of data and states
 represented. Unfortunately, due to the vagaries of state reporting, most
 states do not provide sufficient data to conduct these analyses. For
 comments, concerns, or access to higher resolution data, please contact
-me at <alanfarahani@gmail.com>.
+me at <alanfarahani@gmail.com>.  A full HTML file that contains reproducible R code
+(raw data pending) is available in the repository as "covid19_age_demographics.html". 
+Download that HTML file and open it in any browser.
 
 The assembled data extend from 2020-03-24 to 2020-03-27, and comprise 10
 unique states (the states represented are California, Colorado,
