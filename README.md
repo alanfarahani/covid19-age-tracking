@@ -48,17 +48,17 @@ Tennessee, Washington) for a total of 17357 confirmed cases.
 Data are acquired from state sources where age-demographic material is
 published
 (e.g. <https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx>).
-In most cases, states provide either the raw case count or a proportion
-of cases followed by an absolute number of confirmed cases.
+In most cases, states provide either the raw case count for each age group or a proportion
+of cases in each age group followed by an total number of confirmed cases.
 
 Screenshots of all of the state pages are taken, and the data are
 hand-recorded into an excel spreadsheet that contains untransformed
 data. In one case (the state of Connecticut), absolute numeric data
-apart from the total number of confirmed cases are not provided.
-Nevertheless a graph is – therefore counts for each age range were
-estimated visually and the sum of these counts was made to match the
+apart from the total number of confirmed cases is sometimes not provided.
+Nevertheless a graph is – therefore counts for each age range are
+estimated visually (when necessary) and the sum of these counts is made to match the
 published confirmed cases. Therefore it is possible there is some error
-(\~ +/-10) associated with the estimates for this state.
+(\~ +/-10) associated with the estimates for this state when absolute numbers are not provided.
 
 ![Representative example of data supplied by the state of Nevada
 regarding distribution of confirmed cases across age ranges. Accessed on
