@@ -60,7 +60,7 @@ published confirmed cases. Therefore it is possible there is some error
 
 ![Representative example of data supplied by the state of Nevada
 regarding distribution of confirmed cases across age ranges. Accessed on
-26-03-2020.](./0326/Screenshot_2020-03-26%20Power%20BI%20Report.png)
+26-03-2020.](covid19_demographics2_git_files/figure-gfm/Screenshot_2020-03-26%20Power%20BI%20Report.png)
 
 # Major Trends
 
