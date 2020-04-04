@@ -11,10 +11,10 @@ Alan Farahani
 
 The rapidity of the spread of the novel coronavirus, COVID-19, is one of
 the most notable features of this disease. Much scientific and
-journalistic investigation into the epidemiological aspects of the
+journalistic investigation into epidimeological aspects of the
 coronavirus have focused on *case fatality rates* (CFRs) and other
 demographic variables that may contribute to increased morbidity. For
-instance, it has been argued based on data deriving from China, and more
+instance, it has been argued based on data deriving from China and more
 recently the CDC, that CFRs for those under 40 are relatively low.
 
 In contrast, less attention has been given to the *case detection rate*
@@ -34,80 +34,73 @@ below describes the represented date range of data and states
 represented. Unfortunately, due to the vagaries of state reporting, most
 states do not provide sufficient data to conduct these analyses. For
 comments, concerns, or access to higher resolution data, please contact
-me at <alanfarahani@gmail.com>.  A full HTML file that contains reproducible R code
-(raw data pending) is available in the repository as "covid19_age_demographics.html". 
-Download that HTML file and open it in any browser.
+me at <alanfarahani@gmail.com>.
 
-The assembled data extend from 2020-03-24 to 2020-03-27, and comprise 10
-unique states (the states represented are California, Colorado,
-Connecticut, Georgia, Louisiana, Massachussets, Nevada, Oregon,
-Tennessee, Washington) for a total of 17357 confirmed cases.
+The assembled data extend from NA to 2020-04-04, and comprise 11 unique
+states (the states represented are California, Colorado, Connecticut,
+Georgia, Louisiana, Massachussets, Nevada, Oregon, Tennessee, Virgina,
+Washington) for a total of 67652 confirmed cases.
 
 # Methods and Materials
 
 Data are acquired from state sources where age-demographic material is
 published
 (e.g. <https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx>).
-In most cases, states provide either the raw case count for each age group or a proportion
-of cases in each age group followed by an total number of confirmed cases.
+In most cases, states provide either the raw case count or a proportion
+of cases followed by an absolute number of confirmed cases.
 
 Screenshots of all of the state pages are taken, and the data are
 hand-recorded into an excel spreadsheet that contains untransformed
 data. In one case (the state of Connecticut), absolute numeric data
-apart from the total number of confirmed cases is sometimes not provided.
-Nevertheless a graph is – therefore counts for each age range are
-estimated visually (when necessary) and the sum of these counts is made to match the
+apart from the total number of confirmed cases are not provided.
+Nevertheless a graph is – therefore counts for each age range were
+estimated visually and the sum of these counts was made to match the
 published confirmed cases. Therefore it is possible there is some error
-(\~ +/-10) associated with the estimates for this state when absolute numbers are not provided.
+(\~ +/-10) associated with the estimates for this state.
 
 ![Representative example of data supplied by the state of Nevada
 regarding distribution of confirmed cases across age ranges. Accessed on
-26-03-2020.](covid19_demographics2_git_files/figure-gfm/Screenshot_2020-03-26%20Power%20BI%20Report.png)
+26-03-2020.](./0326/Screenshot_2020-03-26%20Power%20BI%20Report.png)
 
 # Major Trends
 
 Without transformation of the age-ranges, the percent of confirmed cases
-by ages as of 2020-03-27 can be seen in the figure below.
+by ages as of 2020-04-04 can be seen in the figure below.
 
 ![Percent of confirmed COVID-19 cases by age-range given by state
-authorities.](covid19_demographics2_git_files/figure-gfm/state-dist-1.png)
+authorities.](covid19_demographics3_git_files/figure-gfm/state-dist-1.png)
 
-Grouping of states by commonly used age-ranges reveals additional
-insights into the age-structure of those confirmed with the novel
-coronavirus. It can be observed that contrary to widespread assumptions,
-positive carriers of the novel coronavirus (at least those who were
-symptomatic or suspicious enough of their condition to seek testing),
-can range uniformly across age groups. Inter-state differences must be
-accounted for either by a) patterns of community spread of the virus
-specific to the social dynamics of those states and/or b) patterns of
-testing based on the ability of state officials (and representatives) to
-respond.
+It can be observed that contrary to widespread assumptions, positive
+carriers of the novel coronavirus (at least those who were symptomatic
+or suspicious enough of their condition to seek testing), can range
+uniformly across age groups. Inter-state differences must be accounted
+for either by a) patterns of community spread of the virus specific to
+the social dynamics of those states and/or b) patterns of testing based
+on the ability of state officials (and representatives) to respond.
 
-The groups represented in "Group 1" of the figure below are the following:
-
-1.  Colorado, Connecticut, Massachussets, Nevada, Oregon, Washington
-
-![Percent of confirmed COVID-19 cases by age-range across states, where
-it is possible to group states by
-age-range.](covid19_demographics2_git_files/figure-gfm/new-state-dist-1.png)
-
-The figure below illustrates the new cases by age according to absolute
-case count.
-
-![Absolute number of confirmed COVID-19 cases by age-range across
-states, where it is possible to group states by
-age-range.](covid19_demographics2_git_files/figure-gfm/new-state-dist-case-1.png)
+![Total Number of confirmed COVID-19 cases by age-range given by state
+authorities.](covid19_demographics3_git_files/figure-gfm/state-dist-raw-1.png)
 
 The absolute change in the age-demographic profile of recent confirmed
-COVID-19 cases can be seen in the figure below.  The black point represents the total of the previous day, while the point to the right is scaled to the size of the proportion of new cases for that state (as is the color). It is important to note
+COVID-19 cases can be seen in the figure below. It is important to note
 that some states are actively in the process of changing their
-age-reporting ranges, and so many states (such as Georgia) may not have
-cumulative case data that concords with previously published data.
+age-reporting ranges, and therefore some states (such as Georgia and
+Washington) may not have cumulative case data that concords with
+previously published data.
 
 ![Absolute change in confirmed coronavirus cases where the black points
 represent all previously aggregated data. The colors and size of the
 rightmost points indicate the intensity of the proportional
-change.](covid19_demographics2_git_files/figure-gfm/covid-case-change-1.png)
+change.](covid19_demographics3_git_files/figure-gfm/covid-case-change-1.png)
+
+Finally, the graph below illustrates the change through time in the
+total case count per age group in five states that contain the same
+age-range demarcation scheme.
+
+![Absolute change in confirmed coronavirus cases on a log scale over
+time. The colors of the lines indicate the age ranges. A gap in the line
+indicates no data recorded for that
+dya..](covid19_demographics3_git_files/figure-gfm/covid-over-time-1.png)
 
 # Recommendations
 
