@@ -27,9 +27,11 @@ rm(file, fil_path, covid_data_files)
 
 #convert proportions to case data
 covid_age_raw <- covid_age_raw %>%
+  filter(!is.na(date)) %>%
   rename(total = `total?`) %>%
   mutate(cases = ifelse(type == "prop", ((cases_or_prop/100) * total), cases_or_prop),
-         prop = ifelse(type == "case", ((cases_or_prop / total) *100), cases_or_prop))
+         prop = ifelse(type == "case", ((cases_or_prop / total) *100), cases_or_prop),
+         state = gsub("Virgina", "Virginia", state))
 
 #only select the most recent dates
 recent_covid_data <- covid_age_raw %>%
@@ -37,11 +39,13 @@ recent_covid_data <- covid_age_raw %>%
   group_by(state) %>% 
   filter(date == max(date))
 
+last_date <- sort(unique(covid_age_raw$date))[length(sort(unique(covid_age_raw$date)))-1]
+
 #aggregate all of the data up to the most recent date
 previous_covid_data <- covid_age_raw %>%
   filter(!is.na(date)) %>%
   group_by(state) %>% 
-  filter(date == lubridate::date(max(recent_covid_data$date) -1)) %>%
+  filter(date == last_date) %>%
   group_by(state, lower_age, upper_age) %>%
   summarise(cases = sum(cases))
 
@@ -102,7 +106,7 @@ gen_age_label <- function(state_name){
   mutate(age_range = paste(lower_age, upper_age, sep = "-")) %>% pull(age_range)
 }
 
-mass_label <- mass_label <- gen_age_label("Massachussets")
+nv_label <- nv_label <- gen_age_label("Nevada")
 
 
 state_grp1 <- c("Colorado", "Connecticut", "Massachussets", "Nevada", "Oregon")
@@ -110,7 +114,7 @@ state_grp1 <- c("Colorado", "Connecticut", "Massachussets", "Nevada", "Oregon")
 
 graph_grp1 <- recent_covid_data %>%
     filter(state %in% state_grp1) %>%
-    mutate(age_range = cut(lower_age, breaks = c(-1,seq(from = 19, to = 69, by = 10), 100), labels = mass_label)) %>%
+    mutate(age_range = cut(lower_age, breaks = c(-1,seq(from = 9, to = 69, by = 10), 100), labels = nv_label)) %>%
     group_by(age_range) %>%
     summarise(cases = sum(cases), totals = sum(unique(total)), state = "Group 1")
 
@@ -145,7 +149,7 @@ recent_covid_data %>%
 ```
 
 
-The absolute change in the age-demographic profile of recent confirmed COVID-19 cases can be seen in the figure below.  It is important to note that some states are actively in the process of changing their age-reporting ranges, and therefore some states (such as Georgia and Washington) may not have cumulative case data that concords with previously published data.
+The absolute change in the age-demographic profile of recent confirmed COVID-19 cases can be seen in the figure below.  The black points represent the previous absolute number of cases (on log scale), while the open colored points represents the new number of cases, and the size and color of the circle represent the percent increases in cases (the darker red, the larger the percentage increase). It is important to note that some states are actively in the process of changing their age-reporting ranges, and therefore some states (such as Georgia and Washington) may not have cumulative case data that concords with previously published data.
 
 ```{r covid-case-change, fig.cap = "Absolute change in confirmed coronavirus cases where the black points represent all previously aggregated data.  The colors and size of the rightmost points indicate the intensity of the proportional change.", fig.height=8, fig.width=9}
 
@@ -153,7 +157,7 @@ covid_case_change <- previous_covid_data %>%
     inner_join(recent_covid_data %>%
                  select(state, lower_age, upper_age, cases) %>%
                  rename(new_cases = cases)) %>%
-    mutate(prop_change = new_cases/cases)
+    mutate(prop_change = ((new_cases - cases)/cases) *100)
 
 covid_case_change %>%
     mutate(age_range = paste(lower_age, upper_age, sep = "-")) %>%
@@ -176,7 +180,7 @@ Finally, the graph below illustrates the change through time in the total case c
 ```{r covid-over-time, fig.cap = "Absolute change in confirmed coronavirus cases on a log scale over time.  The colors of the lines indicate the age ranges.  A gap in the line indicates no data recorded for that dya..", fig.height=8, fig.width=8}
 covid_age_raw %>%
     filter(state %in% state_grp1) %>%
-    mutate(age_range = cut(lower_age, breaks = c(-1,seq(from = 19, to = 69, by = 10), 100), labels = mass_label)) %>%
+    mutate(age_range = cut(lower_age, breaks = c(-1,seq(from = 9, to = 69, by = 10), 100), labels = nv_label)) %>%
     group_by(state, date, age_range) %>%
     summarise(cases = sum(cases), totals = sum(unique(total))) %>%
     ggplot(aes(date, cases)) +

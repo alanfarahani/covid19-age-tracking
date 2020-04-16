@@ -36,10 +36,10 @@ states do not provide sufficient data to conduct these analyses. For
 comments, concerns, or access to higher resolution data, please contact
 me at <alanfarahani@gmail.com>.
 
-The assembled data extend from NA to 2020-04-04, and comprise 11 unique
-states (the states represented are California, Colorado, Connecticut,
-Georgia, Louisiana, Massachussets, Nevada, Oregon, Tennessee, Virgina,
-Washington) for a total of 67652 confirmed cases.
+The assembled data extend from 2020-03-24 to 2020-04-15, and comprise 11
+unique states (the states represented are California, Colorado,
+Connecticut, Georgia, Louisiana, Massachussets, Nevada, Oregon,
+Tennessee, Virginia, Washington) for a total of 142824 confirmed cases.
 
 # Methods and Materials
 
@@ -65,7 +65,7 @@ regarding distribution of confirmed cases across age ranges. Accessed on
 # Major Trends
 
 Without transformation of the age-ranges, the percent of confirmed cases
-by ages as of 2020-04-04 can be seen in the figure below.
+by ages as of 2020-04-15 can be seen in the figure below.
 
 ![Percent of confirmed COVID-19 cases by age-range given by state
 authorities.](covid19_demographics3_git_files/figure-gfm/state-dist-1.png)
@@ -82,7 +82,11 @@ on the ability of state officials (and representatives) to respond.
 authorities.](covid19_demographics3_git_files/figure-gfm/state-dist-raw-1.png)
 
 The absolute change in the age-demographic profile of recent confirmed
-COVID-19 cases can be seen in the figure below. It is important to note
+COVID-19 cases can be seen in the figure below. The black points
+represent the previous absolute number of cases (on log scale), while
+the open colored points represents the new number of cases, and the size
+and color of the circle represent the percent increases in cases (the
+darker red, the larger the percentage increase). It is important to note
 that some states are actively in the process of changing their
 age-reporting ranges, and therefore some states (such as Georgia and
 Washington) may not have cumulative case data that concords with
