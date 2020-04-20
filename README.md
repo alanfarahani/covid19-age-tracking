@@ -36,10 +36,10 @@ states do not provide sufficient data to conduct these analyses. For
 comments, concerns, or access to higher resolution data, please contact
 me at <alanfarahani@gmail.com>.
 
-The assembled data extend from 2020-03-24 to 2020-04-15, and comprise 11
+The assembled data extend from 2020-03-24 to 2020-04-19, and comprise 11
 unique states (the states represented are California, Colorado,
 Connecticut, Georgia, Louisiana, Massachussets, Nevada, Oregon,
-Tennessee, Virginia, Washington) for a total of 142824 confirmed cases.
+Tennessee, Virginia, Washington) for a total of 170184 confirmed cases.
 
 # Methods and Materials
 
@@ -56,16 +56,27 @@ apart from the total number of confirmed cases are not provided.
 Nevertheless a graph is – therefore counts for each age range were
 estimated visually and the sum of these counts was made to match the
 published confirmed cases. Therefore it is possible there is some error
-(\~ +/-10) associated with the estimates for this state.
+(\~ +/-10) associated with the estimates for this
+state.
 
-![Representative example of data supplied by the state of Nevada
-regarding distribution of confirmed cases across age ranges. Accessed on
-26-03-2020.](covid19_demographics3_git_files/figure-gfm/Screenshot_2020-03-26%20Power%20BI%20Report.png)
+<div class="figure">
+
+<img src="./0326/Screenshot_2020-03-26 Power BI Report.png" alt="Representative example of data supplied by the state of Nevada regarding distribution of confirmed cases across age ranges.  Accessed on 26-03-2020." width="1676" />
+
+<p class="caption">
+
+Representative example of data supplied by the state of Nevada regarding
+distribution of confirmed cases across age ranges. Accessed on
+26-03-2020.
+
+</p>
+
+</div>
 
 # Major Trends
 
 Without transformation of the age-ranges, the percent of confirmed cases
-by ages as of 2020-04-15 can be seen in the figure below.
+by ages as of 2020-04-19 can be seen in the figure below.
 
 ![Percent of confirmed COVID-19 cases by age-range given by state
 authorities.](covid19_demographics3_git_files/figure-gfm/state-dist-1.png)
